@@ -29,3 +29,4 @@ WineBottler seems to be a good solution for running .exe on Mac. Please let me k
 
 ## Acknowledgments
 * All images used do not belong to us
+* This README.md template is from https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
