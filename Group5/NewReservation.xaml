@@ -1,0 +1,48 @@
+﻿<Window x:Name="winNewReservation" x:Class="Group5.NewReservation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Group5"
+        mc:Ignorable="d"
+        Title="New Reservation" Height="420" Width="740" Background="#FF990000" MaxHeight="420" MinHeight="420" MaxWidth="740" MinWidth="740">
+    <Grid Margin="0,0,-6.667,-4.676">
+        <Label x:Name="lblPhone" Content="Phone:*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="378,218,0,0" Foreground="White" FontSize="14"/>
+        <Label x:Name="lblCreditCardNumber" Content="Credit Card Number:*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="378,160,0,0" Foreground="White" FontSize="14"/>
+        <Label x:Name="lblLastName" Content="Last Name:*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="378,130,0,0" Foreground="White" FontSize="14"/>
+        <Label x:Name="lblFirstName" Content="First Name:*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="377,100,0,0" Foreground="White" FontSize="14"/>
+        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Margin="533,100,0,0" FontSize="14" TabIndex="1"/>
+        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Margin="533,130,0,0" FontSize="14" TabIndex="2"/>
+        <Label x:Name="lblCreditCardType" Content="Credit Card Type:*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="378,190,0,0" Foreground="White" FontSize="14"/>
+        <Label x:Name="lblEmail" Content="Email:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="378,245,0,0" Foreground="White" FontSize="14"/>
+        <Button x:Name="btnCreateReservation" Content="Reserve" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Margin="378,280.215,0,0" Click="btnCreateReservation_Click" Foreground="White" Background="Black" FontWeight="Bold" Height="40" TabIndex="6"/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Margin="578,280.215,0,0" Foreground="White" Background="Black" FontWeight="Bold" Height="40" Click="btnClear_Click" TabIndex="7"/>
+        <Label x:Name="lblTitle" Content="New Reservation" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" Margin="10,-4,0,0" FontSize="36"/>
+        <TextBox x:Name="txtCreditCardNumber" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Margin="533,160,0,0" FontSize="14" LostKeyboardFocus="txtCreditCardNumber_LostKeyboardFocus" TabIndex="3"/>
+        <TextBox x:Name="txtPhone" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Margin="533,220,0,0" FontSize="14" TabIndex="4"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Margin="533,248,0,0" FontSize="14" TabIndex="5"/>
+        <Button x:Name="btnReturnToMainMenu" Content="Return to Main Menu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="160" Margin="548,10,0,0" Height="40" Foreground="White" Background="Black" FontWeight="Bold" Click="btnReturnToMainMenu_Click" TabIndex="9"/>
+        <Label x:Name="lblReservationConfirmation" Content="Enter guest information to complete the reservation." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,45,0,0" Foreground="White" FontSize="18" Width="425"/>
+        <Image x:Name="imgCreditCardLogo" HorizontalAlignment="Left" Height="22" Margin="674,190,0,0" VerticalAlignment="Top" Width="34" Source="Images/visa_logo.png"/>
+        <Label x:Name="lblReservationDetails" Content="Reservation Details:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,72,0,0" Foreground="White" FontSize="14"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="130" Margin="378,0,0,21.584" Foreground="White" Background="Black" FontWeight="Bold" Height="40" Click="btnCancel_Click" TabIndex="8"/>
+        <Label x:Name="lblCreditCardTypeResult" Content="" HorizontalAlignment="Right" VerticalAlignment="Top" Width="136" Margin="0,190,62,0" Background="White" FontSize="14" Height="25"/>
+        <Border x:Name="borQuoteReview" BorderThickness="1" Margin="14,100.62,0,21.584" BorderBrush="White" HorizontalAlignment="Left" Width="335">
+            <Label x:Name="label" Content="HOOSIER HOTELS" VerticalAlignment="Top" Margin="78.546,-1.5,78.546,0" Height="34.96" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Foreground="White"/>
+        </Border>
+        <Label x:Name="lblRoomQuantityResult" Content="" Margin="173.958,137.206,0,0" Foreground="White" FontSize="14" HorizontalAlignment="Left" Width="165.993" VerticalAlignment="Top"/>
+        <Label x:Name="lblSubtotalResult" Content="" Margin="173.958,0,0,166.538" VerticalAlignment="Bottom" Foreground="White" FontSize="14" HorizontalAlignment="Left" Width="165.993"/>
+        <Label x:Name="lblTaxResult" Content="" Margin="173.958,0,0,143.538" VerticalAlignment="Bottom" Foreground="White" FontSize="14" HorizontalAlignment="Left" Width="165.993"/>
+        <Label x:Name="lblConvenienceFeeResult" Content="" Margin="173.958,0,0,122.538" VerticalAlignment="Bottom" Foreground="White" FontSize="14" HorizontalAlignment="Left" Width="165.993"/>
+        <Label x:Name="lblTotalResult" Content="" Margin="173.958,0,0,85.538" VerticalAlignment="Bottom" Foreground="White" FontSize="14" HorizontalAlignment="Left" Width="165.993"/>
+        <Label x:Name="lblRoomRatesResult" Content="" Margin="173.958,159.706,0,0" Foreground="White" FontSize="14" HorizontalAlignment="Left" Width="165.993" Height="30.914" VerticalAlignment="Top"/>
+        <Label x:Name="lblRoomQuantity" Content="Number of rooms:" Margin="24.958,137.206,0,0" Foreground="White" FontSize="14" HorizontalAlignment="Left" Width="144" VerticalAlignment="Top"/>
+        <Label x:Name="lblSubtotal" Content="Subtotal:" Margin="24.958,0,0,166.538" VerticalAlignment="Bottom" Foreground="White" FontSize="14" HorizontalAlignment="Left" Width="144"/>
+        <Label x:Name="lblTax" Content="Tax (7%):" Margin="24.958,0,0,143.538" VerticalAlignment="Bottom" Foreground="White" FontSize="14" HorizontalAlignment="Left" Width="144"/>
+        <Label x:Name="lblConvenienceFee" Content="Convenience Fee:" Margin="24.958,0,0,122.538" VerticalAlignment="Bottom" Foreground="White" FontSize="14" HorizontalAlignment="Left" Width="144"/>
+        <Label x:Name="lblTotal" Content="Total Amount Due:" Margin="24.958,0,0,85.538" VerticalAlignment="Bottom" Foreground="White" FontSize="14" HorizontalAlignment="Left" Width="144"/>
+        <Label x:Name="lblRoomRates" Content="Room rates:" Margin="24.958,159.706,0,0" Foreground="White" FontSize="14" HorizontalAlignment="Left" Width="144" Height="30.914" VerticalAlignment="Top"/>
+        <Label x:Name="lblTotal_Copy" Content="Make sure all information are entered&#xD;&#xA;correctly before finalizing the reservation." Margin="24.958,0,0,28.538" VerticalAlignment="Bottom" Foreground="White" FontSize="10" HorizontalAlignment="Left" Width="314.993" HorizontalContentAlignment="Right"/>
+
+    </Grid>
+</Window>

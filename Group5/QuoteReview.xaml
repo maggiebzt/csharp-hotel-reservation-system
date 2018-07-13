@@ -1,0 +1,51 @@
+﻿<Window x:Name="winQuoteReview" x:Class="Group5.QuoteReview"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Group5"
+        mc:Ignorable="d"
+        Title="Quote Review" Height="400" Width="745" Background="#FF990000" MaxHeight="400" MinHeight="400" MaxWidth="745" MinWidth="745">
+    <Grid Margin="0,0,0,15" Height="355" MaxHeight="355" MinHeight="355" Width="740" MaxWidth="740" MinWidth="740">
+        <ComboBox x:Name="cbbRoomType" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="240,95,0,0" TabIndex="1" FontSize="14">
+            <ComboBoxItem Content="One King"/>
+            <ComboBoxItem Content="One King Deluxe"/>
+            <ComboBoxItem Content="Two Queens"/>
+            <ComboBoxItem Content="Two Queen Deluxe"/>
+            <ComboBoxItem Content="One King Suite"/>
+            <ComboBoxItem Content="One King Presidential Suite"/>
+        </ComboBox>
+        <Label x:Name="lblRoomType" Content="Please select a room type:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,93,0,0" Foreground="White" FontSize="14"/>
+        <Label x:Name="lblNumberOfRooms" Content="Please enter the number of rooms:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,133.108,0,0" Foreground="White" FontSize="14"/>
+        <TextBox x:Name="txtNumberOfRooms" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="240,133.108,0,0" TabIndex="2" FontSize="14"/>
+        <Label x:Name="lblTitle" Content="Quote Review" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,3.868,0,0" Foreground="White" FontSize="36" FontWeight="Bold"/>
+        <Label x:Name="lblInstructions" Content="Enter room information to receive quote review and create a reservation." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,54,0,0" Foreground="White" FontSize="18"/>
+        <DatePicker x:Name="dtpCheckInDate" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="240,170,0,0" Width="120" SnapsToDevicePixels="True" TabIndex="3" FontSize="14" IsTabStop="True" SelectedDateChanged="dtpCheckInDate_SelectedDateChange"/>
+        <DatePicker x:Name="dtpCheckOutDate" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="240,206.38,0,0" Width="120" SnapsToDevicePixels="True" TabIndex="4" FontSize="14" SelectedDateChanged="dtpCheckOutDate_SelectedDateChange"/>
+        <Button x:Name="btnCalculateQuote" Content="Calculate Quote" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Margin="230,244,0,0" TabIndex="5" Background="Black" Foreground="White" FontSize="14" FontWeight="Bold" Height="40" Click="btnCalculateQuote_Click"/>
+        <Button x:Name="btnMakeReservation" Content="Make Reservation" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Margin="230,295,0,0" TabIndex="6" Background="Black" Foreground="White" FontSize="14" FontWeight="Bold" Height="40" Click="btnMakeReservation_Click"/>
+        <Button x:Name="btnReturnToMainMenu" Content="Return to Main Menu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="160" Margin="557,12,0,0" TabIndex="8" Height="40" FontSize="14" FontWeight="Bold" Background="Black" Foreground="White" Click="btnReturnToMainMenu_Click"/>
+        <Label x:Name="lblCheckInDate" Content="Please select a check-in date:" HorizontalAlignment="Left" Margin="10,169,0,140" Foreground="White" FontSize="14"/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Right" VerticalAlignment="Top" Width="130" Margin="0,244,587.4,0" Background="Black" Foreground="White" FontSize="14" FontWeight="Bold" Height="40" Click="btnClear_Click" TabIndex="7"/>
+        <Label x:Name="lblMakeReservation" Content="2)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="208,299.5,0,0" Foreground="White" FontSize="14" Height="35.62"/>
+        <Label x:Name="lblCalculateQuote" Content="1)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="208,248.5,0,0" Foreground="White" FontSize="14" Height="38.62"/>
+        <Label x:Name="lblCheckOutDate" Content="Please select a check-out date:" HorizontalAlignment="Left" Margin="10,0,0,102.5" Foreground="White" FontSize="14" Height="42.861" VerticalAlignment="Bottom"/>
+        <Border x:Name="borQuoteReview" BorderThickness="1" Margin="0,95,24.078,16.861" HorizontalAlignment="Right" Width="335" BorderBrush="White">
+            <Label x:Name="label" Content="HOOSIER HOTELS" VerticalAlignment="Top" Margin="78.546,-1.5,78.546,0" Height="34.96" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Foreground="White"/>
+        </Border>
+        <Label x:Name="lblRoomQuantity" Content="Number of rooms:" HorizontalAlignment="Right" VerticalAlignment="Top" Width="124.993" Margin="0,135.158,213.085,0" Foreground="White" FontSize="14" Visibility="Hidden"/>
+        <Label x:Name="lblRoomRates" Content="Room rates:" HorizontalAlignment="Right" Width="124.993" Margin="0,157.656,213.085,0" Foreground="White" FontSize="14" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="lblRoomAvailability" Content="Room availability:" HorizontalAlignment="Right" Margin="0,0,219.981,144.124" Foreground="White" FontSize="14" VerticalAlignment="Bottom" Visibility="Hidden"/>
+        <Label x:Name="lblSubtotal" Content="Subtotal:" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,273.225,102.361" Foreground="White" FontSize="14" Visibility="Hidden"/>
+        <Label x:Name="lblTax" Content="Tax (7%):" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,274.416,81.241" Foreground="White" FontSize="14" Visibility="Hidden"/>
+        <Label x:Name="lblConvenienceFee" Content="Convenience Fee:" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,220.554,60.051" Foreground="White" FontSize="14" Visibility="Hidden"/>
+        <Label x:Name="lblTotal" Content="Total:" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,295.601,23.741" Foreground="White" FontSize="14" Visibility="Hidden"/>
+        <Label x:Name="lblRoomQuantityResult" Content="" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,135.206,36.049,0" Width="165.993" Foreground="White" FontSize="14"/>
+        <Label x:Name="lblRoomAvailabilityResult" Content="" HorizontalAlignment="Right" Margin="0,0,36.049,143.695" Width="165.993" VerticalAlignment="Bottom" Foreground="White" FontSize="14"/>
+        <Label x:Name="lblSubtotalResult" Content="" HorizontalAlignment="Right" Margin="0,0,36.049,102.195" Width="165.993" VerticalAlignment="Bottom" Foreground="White" FontSize="14"/>
+        <Label x:Name="lblTaxResult" Content="" HorizontalAlignment="Right" Margin="0,0,36.049,79.195" Width="165.993" VerticalAlignment="Bottom" Foreground="White" FontSize="14"/>
+        <Label x:Name="lblConvenienceFeeResult" Content="" HorizontalAlignment="Right" Margin="0,0,36.049,58.195" Width="165.993" VerticalAlignment="Bottom" Foreground="White" FontSize="14"/>
+        <Label x:Name="lblTotalResult" Content="" HorizontalAlignment="Right" Margin="0,0,36.049,21.195" Width="165.993" VerticalAlignment="Bottom" Foreground="White" FontSize="14"/>
+        <Label x:Name="lblRoomRatesResult" Content="" HorizontalAlignment="Right" Margin="0,157.706,36.049,165.535" Width="165.993" Foreground="White" FontSize="14" d:LayoutOverrides="Height"/>
+    </Grid>
+</Window>
