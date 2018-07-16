@@ -17,7 +17,7 @@ We used Microsoft Visual Studio 2017. It can be downloaded for free from https:/
 ## Deployment
 
 ### Windows
-To deploy the system, run the .exe file located in: csharp-hotel-reservation-system/Group5/bin/Debug/Group5.exe
+To deploy the system, run the .exe file located in: csharp-hotel-reservation-system/Group5/bin/Debug/Group5.exe (file type is 'Application', not 'XML Configuration File')
 
 ### Mac
 WineBottler seems to be a good solution for running .exe on Mac. Please let me know if you have a suggestion on running the system on Mac.
